@@ -1,0 +1,56 @@
+<div
+  class="w-64 h-80 mx-auto bg-gray-800 text-white shadow-lg rounded-lg overflow-hidden"
+>
+  <div class="p-4 text-center">
+    <div class="flex justify-center mt-4">
+      <img
+        class="w-24 h-24 rounded-full border-4 border-blue-500"
+        [src]="user.avatar"
+        alt="Avatar of {{ user.first_name }}"
+      />
+    </div>
+    <h2 class="text-2xl font-bold mt-4 truncate">
+      {{ user.first_name }} {{ user.second_name }}
+    </h2>
+  </div>
+  <div class="flex justify-around items-center p-4 border-t border-gray-700">
+    <button
+      class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+      (click)="onEdit(user.id)"
+    >
+      Editar
+    </button>
+    <button
+      class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+      (click)="onDelete(user.id)"
+    >
+      Eliminar
+    </button>
+  </div>
+</div>
+
+<div
+  *ngIf="showDialog"
+  class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+>
+  <div class="bg-white rounded-lg shadow-lg p-6 w-96">
+    <h2 class="text-xl font-bold mb-4">Confirmar Eliminación</h2>
+    <p class="text-gray-700 mb-6">
+      ¿Estás seguro de que deseas eliminar este usuario?
+    </p>
+    <div class="flex justify-end gap-4">
+      <button
+        class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+        (click)="closeDialog()"
+      >
+        Cerrar
+      </button>
+      <button
+        class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+        (click)="confirmDelete()"
+      >
+        Aceptar
+      </button>
+    </div>
+  </div>
+</div>

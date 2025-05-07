@@ -5,7 +5,7 @@ Este proyecto fue generado utilizando [Angular CLI](https://github.com/angular/a
 ## Descripción del proyecto
 
 - El proyecto utiliza **Tailwind CSS** para el diseño y estilos.
-- Incluye una integración con una API externa para gestionar usuarios, obteniendo y manipulando datos en formato JSON.
+- Incluye una integración con una API externa para gestionar usuarios y avatares, obteniendo y manipulando datos en formato JSON.
 - Está desplegado en **GitHub Pages** y puedes acceder a la aplicación en la siguiente URL: [https://julianza32.github.io/Complemento360/user-list](https://julianza32.github.io/Complemento360/user-list).
 
 ## Servidor de desarrollo
